@@ -36,4 +36,6 @@ summary(Q2data)
 Q2data$ResponseNoPunc <- removePunctuation(Q2data$Response, preserve_intra_word_contractions = TRUE)
 
 ?dplyr
-Q2data %>% distinct(ResponseNoPunc, .keep_all = TRUE)
+Q2dataunique <- Q2data %>% distinct(ResponseNoPunc, .keep_all = TRUE)
+summary(Q2dataunique)
+
