@@ -9,12 +9,29 @@ install.packages("glue")
 
 install.packages("devtools")
 require(devtools)
+#interface between r & python
 install.packages("reticulate")
 library(reticulate)
 install.packages("yaml")
 library(yaml)
+#deep learning back end
 install.packages("tensorflow")
 library(tensorflow)
 install_github("rstudio/keras")
 3
 library(keras)
+
+install_tensorflow()
+
+#Other packages
+install.packages("pacman")
+library(pacman)
+
+p_load(dplyr)
+p_load(tidyverse)
+p_load(hablar)
+
+#text mining
+p_load(tm)
+
+

@@ -6,15 +6,17 @@ DataPrep.R contains the following:
 * Tidy up data structure
 * Tidy responses- remove punctuation and capitalisation
 * indicate which responses are duplicated
+* Run tokeniser on responses to explore word freqs.
 
 
-Notepad.R contains code that might be useful later
+Notepad.R is a working file containing code that might be useful later
 * Separating out duplicates without using the dup col
 
 
-System&installation
-* contains packages which need to be installed & loaded for keras to work
+System&installation.R
 * notes on troubleshooting installation errors
-* notes on applications which needed installing outside of R
+* notes on applications which needed installing outside of R 
+contains packages which need to be installed & loaded for keras to work
+* Installs other packages required throughout
 
 
