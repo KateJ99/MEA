@@ -12,3 +12,9 @@ Notepad.R contains code that might be useful later
 * Separating out duplicates without using the dup col
 
 
+System&installation
+* contains packages which need to be installed & loaded for keras to work
+* notes on troubleshooting installation errors
+* notes on applications which needed installing outside of R
+
+
