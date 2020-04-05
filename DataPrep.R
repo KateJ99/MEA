@@ -11,6 +11,8 @@ p_load(tidyverse)
 library(tidyverse)
 p_load(dplyr)
 library(dplyr)
+p_load(hablar)
+library(hablar)
 
 Q2data <- read.csv(file = "C:/Users/katea/Documents/MEA/Dissertation/Data/Dataset/Q2.csv", header=TRUE, sep = ",", stringsAsFactors = FALSE)
 head(Q2data)
@@ -31,11 +33,26 @@ str(Q2data)
 summary(Q2data)
 
 
-#remove punctuation from responses
+#remove punctuation & capitalisation from responses
 
-Q2data$ResponseNoPunc <- removePunctuation(Q2data$Response, preserve_intra_word_contractions = TRUE)
+Q2data$ResponseNoPunc <- tolower(removePunctuation(Q2data$Response, preserve_intra_word_contractions = TRUE))
 
-?dplyr
-Q2dataunique <- Q2data %>% distinct(ResponseNoPunc, .keep_all = TRUE)
-summary(Q2dataunique)
+
+
+Q2data$duplicated <- as.numeric(duplicated(Q2data$ResponseNoPunc))
+
+text <- Q2data$ResponseNoPunc
+
+max_words = 2400
+tokenizer <- text_tokenizer(num_words = max_words) %>%
+  fit_text_tokenizer(text)
+#sequences <- texts_to_sequences(tokenizer, text)
+word_index = tokenizer$word_index
+
+##Subset the data into unique & duplicated sets
+Q2dataunique <- subset(Q2data,Q2data$duplicated == 0)
+Q2dataduplicates <- subset(Q2data,Q2data$duplicated == 1)
+
+
+
 
