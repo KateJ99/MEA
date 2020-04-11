@@ -41,6 +41,9 @@ word_index = tokenizer$word_index
 word_count <- tokenizer$word_counts
 write.csv(word_count,file = "Q2wordcount.csv" )
 
+Q2data$wordcount <- sapply(strsplit(Q2data$ResponseNoPunc, " "), length)
+
+summary(Q2data$wordcount)
 
 ##Subset the data into unique & duplicated sets
 Q2dataunique <- subset(Q2data,Q2data$duplicated == 0)
