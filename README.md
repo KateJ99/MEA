@@ -20,3 +20,5 @@ contains packages which need to be installed & loaded for keras to work
 * Installs other packages required throughout
 
 
+Model 1.R
+* contains a basic model stacked model with task specific embedding for Q2
