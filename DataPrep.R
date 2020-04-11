@@ -47,5 +47,23 @@ Q2dataunique <- subset(Q2data,Q2data$duplicated == 0)
 Q2dataduplicates <- subset(Q2data,Q2data$duplicated == 1)
 
 
+#divide unique sample into test/train set. Test set is generous at this point as better to be cautious
+#and add to training than to expose test set to model.
+x <- sample(0:1000,1)
+x
+#858
+set.seed(858)
+train <- sample(nrow(Q2dataunique), size = nrow(Q2dataunique)*0.75, replace = F)
+Q2train <- Q2dataunique[train,]
+Q2test <- Q2dataunique[-train,]
+
+#check for duplicates between the test & train set
+dplyr::intersect(Q2train, Q2test)
+
+#no rows duplicated.
+
+view(dfSummary(Q2train))
+view(dfSummary(Q2test))
+
 
 

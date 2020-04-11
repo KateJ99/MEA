@@ -30,8 +30,10 @@ library(pacman)
 p_load(dplyr)
 p_load(tidyverse)
 p_load(hablar)
+p_load(summarytools)
 
 #text mining
 p_load(tm)
+
 
 
