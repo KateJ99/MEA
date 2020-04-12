@@ -22,3 +22,7 @@ contains packages which need to be installed & loaded for keras to work
 
 Model 1.R
 * contains a basic model stacked model with task specific embedding for Q2
+
+
+To do
+* read out embedding weightings for tensorboard

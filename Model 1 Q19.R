@@ -1,23 +1,24 @@
-##model 1 - train embedding plus 1 1D covnet
-##Q2
+#Model 1 Q19
+##model 1 - train embedding plus simple stacked feedforward
+#Q19
 
-#28 words is maximum length response for Q2
-#612 different "words" used in q2
+##26 words max for Q19
+#655 different words used in Q19
 
 ##prep data for embedding
-text <- Q2train$ResponseNoPunc
+text <- Q19train$ResponseNoPunc
 ##come back to make this k-fold validation?
-training_samples <- 1000
-validation_samples <- 201
-max_words = 628
-max_len = 28
+training_samples <- 700
+validation_samples <- 226
+max_words = 655
+max_len = 26
 tokenizer <- text_tokenizer(num_words = max_words) %>%
   fit_text_tokenizer(text)
 sequences <- texts_to_sequences(tokenizer, text)
 word_index = tokenizer$word_index
 cat("Found",length(word_index), "unique tokens.\n")
 data <-pad_sequences(sequences, maxlen = max_len)
-labels <- as.array(Q2train$AgreedMark)
+labels <- as.array(Q19train$AgreedMark)
 cat("Shape of data tensor:", dim(data),"\n")
 cat("Shape of label tensor:", dim(labels),"\n")
 indices <- sample(1:nrow(data))
@@ -32,7 +33,7 @@ y_val <- labels[validation_indices]
 
 ##model is just to try out - need to adapt
 model <- keras_model_sequential() %>%
-  layer_embedding(input_dim = 612, output_dim = 8, input_length = max_len) %>%
+  layer_embedding(input_dim = max_words, output_dim = 16, input_length = max_len) %>%
   layer_flatten() %>%
   layer_dense(units = 32, activation = "relu") %>%
   layer_dense(units = 32, activation = "relu") %>%
@@ -47,10 +48,11 @@ model %>% compile(
 )
 summary(model)
 
+#need to tweak epochs and batch size
 history <- model %>% fit(
   x_train, y_train,
   epochs = 10,
-  batch_size = 32,
+  batch_size = 16,
   validation_data = list(x_val,y_val)
 )
 

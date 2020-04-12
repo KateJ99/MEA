@@ -33,6 +33,8 @@ Q2data$duplicated <- as.numeric(duplicated(Q2data$ResponseNoPunc))
 
 text <- Q2data$ResponseNoPunc
 
+#tokenising here to explore the word index - number of words used, misspellings etc
+#want to tokenise all words here so setting max words quite high but might need to adjust if there are more
 max_words = 2400
 tokenizer <- text_tokenizer(num_words = max_words) %>%
   fit_text_tokenizer(text)
@@ -41,6 +43,7 @@ word_index = tokenizer$word_index
 word_count <- tokenizer$word_counts
 write.csv(word_count,file = "Q2wordcount.csv" )
 
+#add word count for each entry
 Q2data$wordcount <- sapply(strsplit(Q2data$ResponseNoPunc, " "), length)
 
 summary(Q2data$wordcount)

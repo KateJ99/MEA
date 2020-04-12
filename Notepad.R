@@ -10,3 +10,5 @@ Q2dataduplicates <- Q2data %>% find_duplicates(ResponseNoPunc)
 Q2dataduplicates <- Q2dataduplicates %>%
   group_by(ResponseNoPunc) %>%
   slice(-1)
+
+
