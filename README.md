@@ -28,6 +28,8 @@ layer_dense - units - determines representational size of layer
 layer_dropout - regularization layer to prevent overfitting; value indicates dropout rate
 output layer - activation "sigmoid" produces a binary classification value between 0 and 1 where values close to 0 or 1 indicate higher confidence in classification
 
+Model 2.R
+* Contains a recurrent model to process sequences of text
 
 To do
 * read out embedding weightings for tensorboard
