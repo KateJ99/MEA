@@ -22,7 +22,15 @@ contains packages which need to be installed & loaded for keras to work
 
 Model 1.R
 * contains a basic model stacked model with task specific embedding for Q2
+* embedding arguments: input_dim = size of vocab; output_dim - size of vector space for embedded items (can change); input_length - length of padded responses (i.e. longest response)
+Flatten - needs to be here to connect a dense layer - flattens the embedding output from 2d (embedding, sequence) to 1d (embedding) of size output_dim x input_length
+layer_dense - units - determines representational size of layer
+layer_dropout - regularization layer to prevent overfitting; value indicates dropout rate
+output layer - activation "sigmoid" produces a binary classification value between 0 and 1 where values close to 0 or 1 indicate higher confidence in classification
 
 
 To do
 * read out embedding weightings for tensorboard
+* amend model parameters/ add dropout 
+* k fold validation
+* add pre-trained embeddings
