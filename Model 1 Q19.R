@@ -21,6 +21,7 @@ data <-pad_sequences(sequences, maxlen = max_len)
 labels <- as.array(Q19train$AgreedMark)
 cat("Shape of data tensor:", dim(data),"\n")
 cat("Shape of label tensor:", dim(labels),"\n")
+set.seed = 24
 indices <- sample(1:nrow(data))
 training_indices <- indices[1:training_samples]
 validation_indices <- indices[(training_samples+1):(training_samples + validation_samples)]
@@ -31,13 +32,22 @@ y_train <- labels[training_indices]
 x_val <- data[validation_indices,]
 y_val <- labels[validation_indices]
 
+FLAGS <- flags(
+  flag_numeric("dropout1", 0.4),
+  flag_numeric("dropout2", 0.3),
+  flag_integer("batch_size", 32)
+)
+
 ##model is just to try out - need to adapt
 model <- keras_model_sequential() %>%
   layer_embedding(input_dim = max_words, output_dim = 16, input_length = max_len) %>%
   layer_flatten() %>%
   layer_dense(units = 32, activation = "relu") %>%
+  layer_dropout(rate=FLAGS$dropout1) %>%
   layer_dense(units = 32, activation = "relu") %>%
+  layer_dropout(rate=FLAGS$dropout2) %>%
   layer_dense(units = 32, activation = "relu") %>%
+  layer_dropout(rate=0.25) %>%
   layer_dense(units = 32, activation = "relu") %>%
   layer_dense(units = 1, activation = "sigmoid")
 
@@ -52,7 +62,7 @@ summary(model)
 history <- model %>% fit(
   x_train, y_train,
   epochs = 10,
-  batch_size = 16,
+  batch_size = FLAGS$batch_size,
   validation_data = list(x_val,y_val)
 )
 

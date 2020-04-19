@@ -57,7 +57,7 @@ Q19dataduplicates <- subset(Q19data,Q19data$duplicated == 1)
 
 #divide unique sample into test/train set. Test set is generous at this point as better to be cautious
 #and add to training than to expose test set to model.
-x <- sample(0:1000,1)
+#x <- sample(0:1000,1)
 x
 #24
 set.seed(24)
