@@ -11,6 +11,7 @@ DataPrep.R contains the following:
 
 Notepad.R is a working file containing code that might be useful later
 * Separating out duplicates without using the dup col
+*** Important code for running tuning models to find best hyperparameters
 
 
 System&installation.R
