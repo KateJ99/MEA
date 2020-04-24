@@ -1,0 +1,227 @@
+"","validationtext","y_val","predictions"
+"1","brought him to a small town where his grannie still lived",1,0.999944508075714
+"2","he was in a hospital near where his granny lived",1,0.999987840652466
+"3","he got to meet his grannie again",1,0.996477961540222
+"4","he went back home to the hospital",1,0.997285962104797
+"5","he got to write to his grannie to see if she could visit",1,0.058113306760788
+"6","you know that he was older",0,0.017555832862854
+"7","that he could see his grannie",1,0.987136542797089
+"8","because it was lame at the hospital",0,0.948493003845215
+"9","that the hospital was near where his nan was living",1,0.999916911125183
+"10","it had brought him close to the town he grew up in",1,0.994520604610443
+"11","he had got brought to a town where she was living still",1,0.999850630760193
+"12","he was lame where he got hurt",1,0.986478090286255
+"13","it makes you feel sorry for them",0,0.014386385679245
+"14","he was in a hospital near his grannie's town",1,0.997955322265625
+"15","love",0,0.015443742275238
+"16","the circumstances",0,0.0164464116096497
+"17","he was brought near the town his grannie lives",1,0.999799847602844
+"18","that he might be able to see grannie",1,0.980048298835754
+"19","had to go into hospital",1,0.967756032943726
+"20","it says the word wounded",0,0.0105912983417511
+"21","she was still very lame",1,0.995431900024414
+"22","he was abled to be closer to gran and he remembered her whilst he was closer",1,0.948907852172852
+"23","he was close to his grannie",1,0.972393572330475
+"24","seizing the chance to see grannie",1,0.910836100578308
+"25","that grannie was now old",0,0.0222346782684326
+"26","he has brought to a town were grannie lives",1,0.998248815536499
+"27","his granny could come and see him",1,0.994945645332336
+"28","because it goes back a bit before when it said she would protect him from his fear",0,0.0304964780807495
+"29","she came and visited him",1,0.993602633476257
+"30","it makes him see his grannie again",1,0.991119503974915
+"31","he wanted his granny",0,0.0723335742950439
+"32","she had bought me to th town that i still visited",0,0.960282981395721
+"33","had brought him close to that small town where she was living still",1,0.999913275241852
+"34","he became a soldier",0,0.0133221745491028
+"35","the circumstance brought his closer to grannie",1,0.994077563285828
+"36","it made him see how granny really was",0,0.0773225724697113
+"37","he rememberd that he was not alone",0,0.042283296585083
+"38","he got to see he nan",1,0.981232404708862
+"39","the poet went to a hospital that his grannie was near by to",1,0.995898723602295
+"40","so he would see his grannie",1,0.979867100715637
+"41","he had to go back home",1,0.997660040855408
+"42","it brought him near the town where his granny was living",1,0.999928593635559
+"43","frightening",0,0.0159228146076202
+"44","it says a soldier was wounded while in france",0,0.00580200552940369
+"45","she remembered his granny",0,0.0501767694950104
+"46","he couldn't see his grannie anymore",0,0.960223078727722
+"47","the poet had to write to his grannie and ask her to visit him",0,0.802720129489899
+"48","they were close to that small town where grannie lived",1,0.999889850616455
+"49","the poet went to hospital",1,0.991877675056458
+"50","years later war broke out",0,0.0142770409584045
+"51","it brought him to the town where grannie lived",1,0.999939799308777
+"52","he could meet his grannie",1,0.983684420585632
+"53","the poet went to hospital then went home",1,0.997843623161316
+"54","i realised that circumstance had brought me close to the town where she was living still",1,0.999921202659607
+"55","love lit up again",0,0.139079242944717
+"56","i became a solider and was wounded",0,0.0163788199424744
+"57","he got to see grannie in hospital",1,0.998009741306305
+"58","it had brought him close to that small town where grannie was living still",1,0.999922692775726
+"59","it was still lame",1,0.992214202880859
+"60","he saw his granny again",1,0.99326503276825
+"61","it had brought him back near to the town where his granny stilled lived",1,0.999950647354126
+"62","he realised he had a chance to write and ask her to visit",0,0.0215122103691101
+"63","realised suddenly that circumstance",0,0.00945663452148438
+"64","because it's a war",0,0.0252389907836914
+"65","he could see his grannie again",1,0.997655510902405
+"66","a solder got wounded",0,0.0133891999721527
+"67","he got her back in the poem",0,0.933715462684631
+"68","hobbled throug the ward were i lay",0,0.977711081504822
+"69","wonded",0,0.0144829452037811
+"70","he made his grannie worried",0,0.956336259841919
+"71","visit",0,0.0166231989860535
+"72","sad  emotional",0,0.0146957337856293
+"73","he came to the place where grannie lived",1,0.999532580375671
+"74","he was wouned while he was in france",0,0.0724665522575378
+"75","years later a war broke out and i was a soldier and was wounded",0,0.0277385115623474
+"76","he was seing things",0,0.113530188798904
+"77","when he was injured he felt lame so he could not do any thing",1,0.927206873893738
+"78","he rememberd his granny and wrote a letter to her",0,0.125797003507614
+"79","he was near his grannie and her home",1,0.997383117675781
+"80","it brought him back to his grannie",1,0.979698777198792
+"81","the poet could'nt go see there granny",0,0.991549372673035
+"82","he's in hospital still very lame",1,0.99967235326767
+"83","felt very lame",1,0.984284043312073
+"84","lame and boring",0,0.109566926956177
+"85","home in hospital",1,0.991973400115967
+"86","he was lam",1,0.0266530811786652
+"87","had to go hospital",1,0.791775226593018
+"88","fear",0,0.0132595896720886
+"89","he met his grannie again",1,0.976993441581726
+"90","shock",0,0.0198525190353394
+"91","he was in the army",0,0.0484426319599152
+"92","saded",0,0.0182134211063385
+"93","he went to hospital and the hospital was near the town his grannie lived in",1,0.999860644340515
+"94","that she whent back to her town",1,0.794926464557648
+"95","it was all light and happy and then it became a bit sad and dark",0,0.0391654074192047
+"96","it brought me close to that small town",0,0.0237492620944977
+"97","hurt",0,0.0148082077503204
+"98","he could die",0,0.0246334373950958
+"99","that the hospital he was at was near his grannies",1,0.99907648563385
+"100","that he was bored",0,0.0168492197990417
+"101","that he got to see his grannie",1,0.992140531539917
+"102","he was brought closer to his granny",1,0.997791528701782
+"103","saddnes",0,0.0178834497928619
+"104","that the boy was getting injured becuse he whent into the war",0,0.0633992850780487
+"105","he could write to his grannie because he was outside her small town",1,0.0289194285869598
+"106","he returned home in hospital injured",1,0.892876148223877
+"107","the poet was able to meet his grannie again",1,0.994962930679321
+"108","his grannie wasn't there to help",0,0.0131300985813141
+"109","he became a soldier in war and he was wounded",0,0.0253837108612061
+"110","he got to see granny again",1,0.995730400085449
+"111","it made the reader feel affectionate towards the poet",0,0.0236752033233643
+"112","his grannie was still there for you",0,0.016074925661087
+"113","to visit to him",0,0.155153214931488
+"114","he chould see his grannie",1,0.961716055870056
+"115","he realised it had brought him close to a small town where she was still living",1,0.999964833259583
+"116","had bought me close to that small town",0,0.0273120999336243
+"117","the effect was lame",0,0.96123468875885
+"118","he would get to see his grannie",1,0.973517656326294
+"119","to bring him close to where grannie lived",1,0.999705672264099
+"120","he went back to grannie's house",1,0.962634325027466
+"121","that he was back home but in hospital",1,0.995952725410461
+"122","he went back home in hospital",1,0.999042510986328
+"123","he couldn't visit grannie she had to visit him",1,0.531482577323914
+"124","to write a letter to his grannie to visit him",0,0.321519494056702
+"125","still very calm",0,0.757306575775146
+"126","feel very lame",1,0.973462224006653
+"127","i became a soldier and was wounded while in france",0,0.00692152976989746
+"128","brought him close to his grannie",1,0.992707967758179
+"129","that they will be circomstances",0,0.0545732378959656
+"130","had brought me back to that small town where she was living still",1,0.999905824661255
+"131","got wounded lame back home in hospatal",1,0.990003347396851
+"132","shocked to see his grannie so small",0,0.029385894536972
+"133","yeyos later war broconout and bcaym a soldier and was wonded whille in frane",0,0.106340348720551
+"134","that he couldn't walk",1,0.888015687465668
+"135","it made the reader sad his granny was poorly too because he went to fight in the war and she could've been alone",0,0.0854662656784058
+"136","war broke",0,0.0170972943305969
+"137","he was near the place his grannie was living",1,0.998125433921814
+"138","the effect was sadness",0,0.0201206505298615
+"139","it made you feel sorry for him",0,0.015798032283783
+"140","when the poet was in hospital he felt lame",1,0.998692870140076
+"141","back home in hospital",1,0.996110737323761
+"142","it showes his grannie cares for him",0,0.0236787796020508
+"143","he could ask his grannie if she would see him",0,0.578133761882782
+"144","he wanted family to support him",0,0.183342814445496
+"145","he felt very lame being in jured in war",1,0.901954174041748
+"146","that circumstance had brought him close to that small town where is grannie was still living",1,0.999906957149506
+"147","he realised that circumstance had brought him close to that small town",0,0.0508359372615814
+"148","he was in the same town as his grannie",1,0.971536576747894
+"149","he was given an opertunity to see her again",1,0.988479495048523
+"150","the poet wanted to see grannie",0,0.238645702600479
+"151","a shock",0,0.0163741409778595
+"152","that the poet became lame",1,0.963874340057373
+"153","he went to hospital",1,0.981933295726776
+"154","he was in hospital in the town where grannie lived",1,0.999971151351929
+"155","he told his granny to come and visit him in the hospital",1,0.986571431159973
+"156","he was back home in hospital was still very lame",1,0.999772071838379
+"157","he was back in that small town where grannie was",1,0.993960440158844
+"158","she could see him again",1,0.994890451431274
+"159","she was living still",0,0.994789481163025
+"160","he went home to the hospital",1,0.996304750442505
+"161","wouned while in france",0,0.00914117693901062
+"162","it brought him to were his grannie stilll lived",1,0.998737931251526
+"163","that he could see his gran",1,0.985023856163025
+"164","he wouldn't see his granny for a while",0,0.119396448135376
+"165","it means he goes to hospital then grannie comes",1,0.993106245994568
+"166","suspence",0,0.0173833966255188
+"167","he was in his grannys town",1,0.922496438026428
+"168","he got to his grannie again",1,0.995849967002869
+"169","it brought the poet close to where his grannie was living",1,0.999688744544983
+"170","going to hospital back at home",1,0.998635649681091
+"171","that he can't write",0,0.0185959041118622
+"172","it brought him close to the town where she was living still",1,0.999925255775452
+"173","it was still very lame",1,0.992504715919495
+"174","he relised the circumstances",0,0.036219984292984
+"175","he was sent to a town near where grannie lived",1,0.999986290931702
+"176","he was wouded",0,0.0280274450778961
+"177","and so i seized",0,0.0176066756248474
+"178","the poet was able to see his grannie",1,0.986256837844849
+"179","wanting the grannie to come and see him",0,0.973390936851501
+"180","the curcumstances",0,0.0188275873661041
+"181","she was shocked",0,0.0259584486484528
+"182","he got to see his grann again",1,0.996782422065735
+"183","i became a solider",0,0.0152121484279633
+"184","the sorrow and how she must have felt scared",0,0.0407902300357819
+"185","his grannie came",1,0.952052652835846
+"186","he would see his grannie again",1,0.996744751930237
+"187","that when he was in hospital he was near his grannie",1,0.9979567527771
+"188","one effect was he got to see his nan",1,0.992644906044006
+"189","brought him close to that small town",0,0.0469729602336884
+"190","he was put in a small town where she was living still",1,0.999783754348755
+"191","that he was wounded while in france",0,0.00987899303436279
+"192","he was fighting and fighting in the war",0,0.250734329223633
+"193","he was put in a hospital near his grannie was still living",1,0.999825596809387
+"194","it had brought him close to his grannie",1,0.991762638092041
+"195","he was taken to a hospital near his grandma",1,0.999574601650238
+"196","one effect was that he was wounded",0,0.0170414745807648
+"197","his memory wasn't as good as before",0,0.0358123779296875
+"198","it had brung him to a hospital close to were granny lived",1,0.999706089496613
+"199","brought him back to the small town she lived in",1,0.999820828437805
+"200","it made you feel sad and worried",0,0.0181191563606262
+"201","he was hurt",0,0.0211614668369293
+"202","living near his grannie again",1,0.998955309391022
+"203","he was taken to a hospital near where his grannie lived",1,0.999987959861755
+"204","he didn't listern",0,0.0512577891349792
+"205","he as near his granny vilage",1,0.995550274848938
+"206","the poet realised the circumstance",0,0.0168202817440033
+"207","he realised he was in the town where his grannie still lived",1,0.999926686286926
+"208","his grannie came to visit",1,0.314416855573654
+"209","he had to go to hospital which brought him close to the town where his grannie lived",1,0.99998664855957
+"210","he broke out",0,0.0161448121070862
+"211","the grannie coming back",0,0.320433974266052
+"212","his grannie came to see him again",1,0.996119022369385
+"213","that he was hurt from war",0,0.0271935164928436
+"214","he started to write poems",0,0.0364720523357391
+"215","the poet was excited because he was brought back to the same town his grannie was in",1,0.992049098014832
+"216","good because he got to see his granny again",1,0.99831759929657
+"217","granny had to visit him because he couldn't go to her",1,0.895647585391998
+"218","he saw grannie again",1,0.98363208770752
+"219","so he remembers what it was like with his granny",0,0.0324379205703735
+"220","he was back in his grandmothers town",1,0.971418261528015
+"221","he got to see her again",1,0.994016885757446
+"222","he came back to the town where his gran was",1,0.999228715896606
+"223","that grannie could visit him",1,0.27521288394928
+"224","going back to his grannie's hometown and remembering her",1,0.956935942173004
+"225","very harmful and painful",0,0.0311301648616791
+"226","close",0,0.0243026427924633

@@ -1,0 +1,4 @@
+{
+  "message": "Unable to convert flag 'dropout1' with value 'c(0.2, 0.3, 0.4)' to type numeric",
+  "traceback": ["stop(\"Unable to convert flag '\", name, \"' with value \", value, \n    \" to type \", type, call. = FALSE)", "parse_flags(FLAGS, config, file, arguments)", "flags(flag_numeric(\"dropout1\", 0.4), flag_numeric(\"dropout2\", \n    0.3))", "eval(ei, envir)", "eval(ei, envir)", "training_run(\"Model 1 Q19.r\", flags = list(dropout1 = c(0.2, \n    0.3, 0.4), dropout2 = c(0.2, 0.3, 0.4)))"]
+}

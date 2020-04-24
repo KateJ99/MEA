@@ -5,6 +5,9 @@
 ## to update from source and no to update dependencies in the keras installation (option 3) worked.
 ##I also needed to install python & miniconda outside of R.
 
+install.packages("pacman")
+library(pacman)
+
 install.packages("glue")
 
 install.packages("devtools")
@@ -20,6 +23,11 @@ library(tensorflow)
 install_github("rstudio/keras")
 3
 library(keras)
+#these packages help log training runs to tune hyperparameters
+p_load(tfruns)
+p_load(tfestimators)
+
+
 
 install_tensorflow()
 

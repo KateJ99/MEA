@@ -1,0 +1,104 @@
+
+> #Model 1 Q19
+> ##model 1 - train embedding plus simple stacked feedforward
+> #Q19
+> 
+> ##26 words max for Q19
+> #655 different words used in Q19
+> 
+ .... [TRUNCATED] 
+
+> ##come back to make this k-fold validation?
+> training_samples <- 700
+
+> validation_samples <- 226
+
+> max_words = 655
+
+> max_len = 26
+
+> tokenizer <- text_tokenizer(num_words = max_words) %>%
++   fit_text_tokenizer(text)
+
+> sequences <- texts_to_sequences(tokenizer, text)
+
+> word_index = tokenizer$word_index
+
+> cat("Found",length(word_index), "unique tokens.\n")
+Found 572 unique tokens.
+
+> data <-pad_sequences(sequences, maxlen = max_len)
+
+> labels <- as.array(Q19train$AgreedMark)
+
+> cat("Shape of data tensor:", dim(data),"\n")
+Shape of data tensor: 926 26 
+
+> cat("Shape of label tensor:", dim(labels),"\n")
+Shape of label tensor: 926 
+
+> indices <- sample(1:nrow(data))
+
+> training_indices <- indices[1:training_samples]
+
+> validation_indices <- indices[(training_samples+1):(training_samples + validation_samples)]
+
+> x_train <- data[training_indices,]
+
+> y_train <- labels[training_indices]
+
+> x_val <- data[validation_indices,]
+
+> y_val <- labels[validation_indices]
+
+> ##model is just to try out - need to adapt
+> model <- keras_model_sequential() %>%
++   layer_embedding(input_dim = max_words, output_dim = 16, input .... [TRUNCATED] 
+
+> model %>% compile(
++   optimizer = "rmsprop",
++   loss = "binary_crossentropy",
++   metrics =c("acc")
++ )
+
+> summary(model)
+Model: "sequential_2"
+____________________________________________________________________________________________________
+Layer (type)                                 Output Shape                            Param #        
+====================================================================================================
+embedding_2 (Embedding)                      (None, 26, 16)                          10480          
+____________________________________________________________________________________________________
+flatten_2 (Flatten)                          (None, 416)                             0              
+____________________________________________________________________________________________________
+dense_10 (Dense)                             (None, 32)                              13344          
+____________________________________________________________________________________________________
+dense_11 (Dense)                             (None, 32)                              1056           
+____________________________________________________________________________________________________
+dense_12 (Dense)                             (None, 32)                              1056           
+____________________________________________________________________________________________________
+dense_13 (Dense)                             (None, 32)                              1056           
+____________________________________________________________________________________________________
+dense_14 (Dense)                             (None, 1)                               33             
+====================================================================================================
+Total params: 27,025
+Trainable params: 27,025
+Non-trainable params: 0
+____________________________________________________________________________________________________
+
+> #need to tweak epochs and batch size
+> history <- model %>% fit(
++   x_train, y_train,
++   epochs = 10,
++   batch_size = 32,
++   validation_data = l .... [TRUNCATED] 
+
+> ##look at specific responses
+> trainingtext <- text[training_indices]
+
+> validationtext <- text[validation_indices]
+
+> predictions <- model %>% predict(x_val)
+
+> output <- data.frame(validationtext,y_val,predictions)
+
+> write.csv(output, file = "Q19val.csv")

@@ -1,0 +1,56 @@
+
+> #Model 1 Q19
+> ##model 1 - train embedding plus simple stacked feedforward
+> #Q19
+> 
+> ##26 words max for Q19
+> #655 different words used in Q19
+> 
+ .... [TRUNCATED] 
+
+> ##come back to make this k-fold validation?
+> training_samples <- 700
+
+> validation_samples <- 226
+
+> max_words = 655
+
+> max_len = 26
+
+> tokenizer <- text_tokenizer(num_words = max_words) %>%
++   fit_text_tokenizer(text)
+
+> sequences <- texts_to_sequences(tokenizer, text)
+
+> word_index = tokenizer$word_index
+
+> cat("Found",length(word_index), "unique tokens.\n")
+Found 572 unique tokens.
+
+> data <-pad_sequences(sequences, maxlen = max_len)
+
+> labels <- as.array(Q19train$AgreedMark)
+
+> cat("Shape of data tensor:", dim(data),"\n")
+Shape of data tensor: 926 26 
+
+> cat("Shape of label tensor:", dim(labels),"\n")
+Shape of label tensor: 926 
+
+> indices <- sample(1:nrow(data))
+
+> training_indices <- indices[1:training_samples]
+
+> validation_indices <- indices[(training_samples+1):(training_samples + validation_samples)]
+
+> x_train <- data[training_indices,]
+
+> y_train <- labels[training_indices]
+
+> x_val <- data[validation_indices,]
+
+> y_val <- labels[validation_indices]
+
+> ##model is just to try out - need to adapt
+> model <- keras_model_sequential() %>%
++   layer_embedding(input_dim = max_words, output_dim = 16, input .... [TRUNCATED] 
