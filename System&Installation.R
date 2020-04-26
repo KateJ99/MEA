@@ -26,7 +26,10 @@ library(keras)
 #these packages help log training runs to tune hyperparameters
 p_load(tfruns)
 p_load(tfestimators)
-
+##package to evaluate ML models
+p_load(yardstick)
+##to explore black boc
+p_load(lime)
 
 
 install_tensorflow()
