@@ -15,7 +15,7 @@ max_len = 26
 ##call tokenise to prepare data for model
 source(file = "Tokenise.R", echo = TRUE)
 
-training_run("Model_StackedDense_1.r")
+training_run("Model_StackedDense_1_tuning.r")
 
 ##call tuning runs and set flags for different hyperparameters
 runs <- tuning_run("Model_StackedDense_1.r", flags = list(

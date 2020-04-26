@@ -37,3 +37,45 @@ runs <- tuning_run("Model 1 Q19.r", flags = list(
 y
 
 View(runs[order(runs$metric_val_acc, decreasing = TRUE), ])
+
+##model1
+##model is just to try out - need to adapt
+model <- keras_model_sequential() %>%
+  layer_embedding(input_dim = max_words, output_dim = 16, input_length = max_len) %>%
+  layer_flatten() %>%
+  layer_dense(units = FLAGS$units1, activation = "relu") %>%
+  layer_dropout(rate=FLAGS$dropout1) %>%
+  layer_dense(units = FLAGS$units2, activation = "relu") %>%
+  layer_dropout(rate=FLAGS$dropout2) %>%
+  layer_dense(units = FLAGS$units3, activation = "relu") %>%
+  layer_dropout(rate=FLAGS$dropout3) %>%
+  layer_dense(units = FLAGS$units4, activation = "relu") %>%
+  layer_dense(units = 1, activation = "sigmoid")
+
+##yardstick to eval
+https://blogs.rstudio.com/tensorflow/posts/2018-01-11-keras-customer-churn/
+  
+  
+  ###for k fold validation (doesn't work)
+  set.seed = setseed
+k <- 5
+indices <- sample(1:nrow(data))
+folds <- cut(1:indices, breaks = 5, labels = FALSE)
+validation_indices <- which(folds==5,arr.ind = TRUE)
+
+
+
+validation_scores <- c()
+for (i in 1:k) {
+  validation_indices <- which(folds==i, arr.ind = TRUE)
+}
+training_indices <- indices[1:training_samples]
+validation_indices <- indices[(training_samples+1):(training_samples + validation_samples)]
+
+x_train <- data[training_indices,]
+y_train <- labels[training_indices]
+
+x_val <- data[validation_indices,]
+y_val <- labels[validation_indices]
+
+
