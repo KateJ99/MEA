@@ -57,5 +57,6 @@ View(runs[order(runs$metric_val_acc, decreasing = TRUE), ])
 ls_runs(metric_val_acc > 0.88, order = metric_val_acc)
 View(ls_runs())
 
+##run best model with k fold validation
 
 
