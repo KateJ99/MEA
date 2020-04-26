@@ -25,6 +25,7 @@ View(ls_runs())
 #moves runs to archive (empty - all, otherwise can specify)
 clean_runs()
 
+y
 #code for tuning
 #https://tensorflow.rstudio.com/tools/tfruns/tuning/
 
