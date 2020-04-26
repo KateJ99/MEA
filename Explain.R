@@ -16,13 +16,14 @@ get_embedding_explanation <- function(text) {
 
 
 
-sentence_to_explain <- Qdata$ResponseNoPunc[1:10]
+sentence_to_explain <- Qdata$ResponseNoPunc[1:20]
 sentence_to_explain
 
 explainer <- lime(sentence_to_explain, model = model, preprocess = get_embedding_explanation)
 
 
-explanation <- explain(sentence_to_explain, explainer, n_labels = 1, n_features = 26,n_permutations = 1e4)
+explanation <- lime::explain(sentence_to_explain, explainer, n_labels = 1, n_features = 3,n_permutations = 1e4)
+
 
 plot_text_explanations(explanation)
 plot_features(explanation)

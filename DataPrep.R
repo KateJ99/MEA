@@ -11,6 +11,8 @@
 ##defining question specific filenames
 filename <- paste("C:/Users/katea/Documents/MEA/Dissertation/Data/Dataset/", QNo, ".csv", sep="")
 wordcountcsv <- paste(QNo, "wordcount.csv", sep="")
+trainsummaryfile <- paste(QNo, "train.html", sep="")
+testsummaryfile <- paste(QNo, "test.html", sep="")
 
 
 ##REad in data
@@ -74,8 +76,8 @@ dplyr::intersect(Qtrain, Qtest)
 
 #no rows duplicated.
 
-view(dfSummary(Qtrain))
-view(dfSummary(Qtest))
+view(dfSummary(Qtrain),file = trainsummaryfile)
+view(dfSummary(Qtest), file = testsummaryfile)
 
 
 

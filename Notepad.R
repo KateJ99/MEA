@@ -53,29 +53,9 @@ model <- keras_model_sequential() %>%
   layer_dense(units = 1, activation = "sigmoid")
 
 ##yardstick to eval
-https://blogs.rstudio.com/tensorflow/posts/2018-01-11-keras-customer-churn/
+#https://blogs.rstudio.com/tensorflow/posts/2018-01-11-keras-customer-churn/
   
   
-  ###for k fold validation (doesn't work)
-  set.seed = setseed
-k <- 5
-indices <- sample(1:nrow(data))
-folds <- cut(1:indices, breaks = 5, labels = FALSE)
-validation_indices <- which(folds==5,arr.ind = TRUE)
 
-
-
-validation_scores <- c()
-for (i in 1:k) {
-  validation_indices <- which(folds==i, arr.ind = TRUE)
-}
-training_indices <- indices[1:training_samples]
-validation_indices <- indices[(training_samples+1):(training_samples + validation_samples)]
-
-x_train <- data[training_indices,]
-y_train <- labels[training_indices]
-
-x_val <- data[validation_indices,]
-y_val <- labels[validation_indices]
 
 
