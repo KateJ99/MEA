@@ -34,6 +34,7 @@ p_load(lime)
 
 install_tensorflow()
 
+
 #Other packages
 install.packages("pacman")
 library(pacman)
@@ -42,6 +43,7 @@ p_load(dplyr)
 p_load(tidyverse)
 p_load(hablar)
 p_load(summarytools)
+p_load(import)
 
 #text mining
 p_load(tm)

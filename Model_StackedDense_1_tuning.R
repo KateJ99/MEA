@@ -17,7 +17,7 @@ FLAGS <- flags(
 
 ##model is just to try out - need to adapt
 model <- keras_model_sequential() %>%
-  layer_embedding(input_dim = max_words, output_dim = 16, input_length = max_len) %>%
+  layer_embedding(input_dim = max_words, output_dim = 16, input_length = max_len, name="embed") %>%
   layer_flatten() %>%
   layer_dense(units = FLAGS$units1, activation = "relu") %>%
   layer_dropout(rate=FLAGS$dropout1) %>%
@@ -36,12 +36,26 @@ model %>% compile(
 summary(model)
 
 
+callbacks = list(
+  callback_tensorboard(
+    log_dir = paste(QNo,"_log_dir", sep=""),
+    histogram_freq = 1,
+    embeddings_freq = 1,
+    embeddings_data = matrix(1:max_words, nrow = 4)
+  )
+)
+
+
+
 history <- model %>% fit(
   x_train, y_train,
   epochs = 10,
   batch_size = FLAGS$batch_size,
-  validation_data = list(x_val,y_val)
+  validation_data = list(x_val,y_val),
+  callbacks = callbacks
 )
+
+
 
 ##look at specific responses
 trainingtext <- text[training_indices]
