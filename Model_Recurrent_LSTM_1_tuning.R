@@ -2,13 +2,25 @@
 
 valoutput <- paste(QNo, "val.csv", sep="")
 
+##set up flags to tune hyperparams
+FLAGS <- flags(
+  flag_integer("units1", 32),
+  flag_integer("units2", 32),
+  flag_integer("units3", 32),
+  flag_integer("units4", 32),
+  flag_numeric("dropout1",0.2),
+  flag_numeric("dropout2",0.2),
+  flag_numeric("dropout3",0.2),
+  flag_integer("batch_size",12)
+)
+
 ##model is just to try out - need to adapt
 model <- keras_model_sequential() %>%
-  layer_embedding(input_dim = 612, output_dim = 8, input_length = max_len) %>%
-  layer_lstm(units = 8, return_sequences = TRUE) %>%
-  layer_lstm(units = 8, return_sequences = TRUE) %>%
-  layer_lstm(units = 8, return_sequences = TRUE) %>%
-  layer_lstm(units = 8) %>%
+  layer_embedding(input_dim = max_words, output_dim = FLAGS$units1, input_length = max_len) %>%
+  layer_lstm(units = FLAGS$units1, return_sequences = TRUE) %>%
+  layer_lstm(units = 32, return_sequences = TRUE) %>%
+  layer_lstm(units = 32, return_sequences = TRUE) %>%
+  layer_lstm(units = 32) %>%
   layer_dense(units = 1, activation = "sigmoid")
 
 model %>% compile(
@@ -20,7 +32,7 @@ summary(model)
 
 history <- model %>% fit(
   x_train, y_train,
-  epochs = 16,
+  epochs = 10,
   batch_size = 32,
   validation_data = list(x_val,y_val)
 )
@@ -32,5 +44,5 @@ predictions <- model %>% predict(x_val)
 
 output <- data.frame(validationtext,y_val,predictions)
 
-write.csv(output, file = "Q2val.csv")
+write.csv(output, file = valoutput)
 

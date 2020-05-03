@@ -8,7 +8,8 @@ FLAGS <- flags(
   flag_numeric("dropout1",0.2),
   flag_numeric("dropout2",0.2),
   flag_numeric("dropout3",0.2),
-  flag_integer("batch_size",12)
+  flag_integer("batch_size",12),
+  flag_integer("epochs",10)
 )
 
 set.seed = setseed
@@ -46,7 +47,7 @@ for (i in 1:k) {
   
   history <- model %>% fit(
     x_train, y_train,
-    epochs = 10,
+    epochs = FLAGS$epochs,
     batch_size = FLAGS$batch_size,
     validation_data = list(x_val,y_val))
   results <- model %>% evaluate(x_val, y_val)
