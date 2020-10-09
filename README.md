@@ -1,9 +1,12 @@
  MEA
 Dissertation code
 
-Q2.R contains the following:
+Q2.R/Q19.R/Q25.R/Q37.R each contain the following:
 Question specific R script which calls modular scripts to
-run data prep & training models for question 2.
+run data prep & training models for specific questions.
+
+
+
 
 DataPrep.R contains the following:
 * Read in all data for each item
