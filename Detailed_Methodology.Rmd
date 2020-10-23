@@ -1,0 +1,41 @@
+---
+title: "Automated scoring using ANNs - detailed methodology"
+output: html_notebook
+---
+
+This R notebook is intended to detail the methodology used to create and run the ANN scoring.
+
+## System
+
+This project was conducted in R using the Keras machine learning package with Tensorflow back end. 
+Keras is a machine learning application progamming interface (API) that provides a simplified library of machine
+learning functions which can be connected to a machine learning engine in order to run machine learning models. 
+Tensorflow is Google's open source machine learning engine, and is the default engine, or "back-end" for Keras. 
+Keras and Tensorflow can be installed in R using the following code.
+
+
+```{r}
+install.packages("pacman")
+library(pacman)
+p_load(tensorflow)
+install_github("rstudio/keras")
+library(keras)
+
+#note Keras has some python dependencies and may require require python and conda to be installed. 
+#See System&Installation.R for more detailed instructions.
+
+```
+
+## Data preparation
+
+
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
