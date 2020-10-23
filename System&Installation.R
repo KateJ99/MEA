@@ -30,9 +30,13 @@ p_load(tfestimators)
 p_load(yardstick)
 ##to explore black boc
 p_load(lime)
-
+##install rmarkdown 
+p_load(rmarkdown)
+##install latex for PDF from markdown
+p_load(tinytex)
 
 install_tensorflow()
+
 
 
 #Other packages
